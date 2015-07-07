@@ -5,6 +5,9 @@
  */
 package laboratorio4;
 
+import Estados.Estado2;
+import Estados.EstadoF;
+import Estados.EstadoI;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +21,20 @@ public class Laboratorio4 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ArrayList<Integer> arreglo = new ArrayList<>();
+        Estado e1 = new EstadoI();
+        Estado e2 = new Estado2();
+        Estado e3 = new EstadoF();
+        MaquinaDulce md=new MaquinaDulce(Boolean.FALSE);
+        md.agregarEstado(e1);
+        md.agregarEstado(e2);
+        md.agregarEstado(e3);
+        md.procesar();
+        md.procesar();
+        md.setMoneda(Boolean.TRUE);
+        md.procesar();
+        md.procesar();
+        md.procesar();
+        
     }
     
 }
